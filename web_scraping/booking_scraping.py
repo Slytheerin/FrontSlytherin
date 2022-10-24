@@ -1,8 +1,11 @@
+from flask import Flask
 import time
 import numpy as np
 from selenium import webdriver
 import common as cf
 from selenium.webdriver.common.by import  By
+
+app = Flask(__name__)
 
 
 class NbrChildrenNotEqualToLenAgesOfChildren(ValueError):
@@ -327,3 +330,7 @@ if __name__ == '__main__':
                    filename="booking.csv")
     book.process_search_results()
     book.main()
+
+@app.route('/')
+def index():
+    return "index"
