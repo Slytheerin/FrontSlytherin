@@ -14,8 +14,8 @@ class Booking:
     dbsqlite = None
     
     def __init__(self, city, filename, start_date,
-                 end_date, nbr_adults=None,
-                 nbr_children=None, ages_of_children=None, nbr_room=None):
+                end_date, nbr_adults=None,
+                nbr_children=None, ages_of_children=None, nbr_room=None):
         """
         :param city: string
         :param filename: string
