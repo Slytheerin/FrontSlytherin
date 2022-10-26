@@ -8,6 +8,9 @@ db = SQLAlchemy(app)
 
 app.app_context().push()
 
+####################### BASE DE DATOS #################
+
+
 class Servicio(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     id_lugar = db.Column(db.Integer)
@@ -34,6 +37,8 @@ class Servicio(db.Model):
         self.precio = precio
         self.latitud = latitud
         self.longitud = longitud
+ 
+
 
 class Lugar(db.Model):
     id_lugar = db.Column(db.Integer, primary_key=True)
@@ -55,6 +60,8 @@ class Lugar(db.Model):
         self.longitud = longitud
 
 
+####################### URL- ENDPOINTS #######################
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -62,8 +69,8 @@ def index():
 
 @app.route('/showcity', methods = ['GET'])
 def showcity():
-    lugares = Lugar.query.all() #se crea el objeto servicios que pertenece a la clase Servicios.(base de datos)y se utilliza el metodo query(para hacer un pedido a la base de datos) y se utiliza all para llamar a todos los campos de la base de datos   
-    return render_template('showcity.html', lugares=lugares)
+    lugares = Lugar.query.all() #se crea el objeto lugares que pertenece a la clase Lugar (base de datos) y se utilliza el metodo query (para hacer un pedido a la base de datos) y se utiliza all para llamar a todos los campos de la base de datos.   
+    return render_template('showcity.html', lugares=lugares)  #se utiliza return para retornar el template renderizado con render template, se indica el archivo html que va a renderizar y se declara la variable que será utilizada en el html, se le da el valor de la variable declarada en la función de la ruta. 
 
 
 @app.route('/showfilters', methods = ['GET'] )
