@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+<!--
+  This example requires some changes to your config:
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+<!-- Texto de cabecera... -->
+<nav class="flex justify-between bg-gray-200 opacity-80">
+    <div class="h-20 w-20">
+      <img
+      class="mt-5 h-10 w-20"
+        src="/img/dalt-transparente.png"
+        alt="RecorriendoPy"
+      />
+    </div>
+    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="h-20 w-100 bg-black text-white">
+      <div class="mt-7 justify-center font-sans">
+        <a
+          class="mx-7 hover:text-slate-50 hover:underline underline-offset-4 decoration-slate-50"
+          href="./RecorriendoPy.html"
+          >Inicio</a
+        >
+        <a
+          class="mx-7 hover:text-slate-50 hover:underline underline-offset-4s decoration-slate-50"
+          href=""
+          >Contactos</a
+        >
+        <div class="dropdown inline-block relative">
+          <button class="mx-7 hover:text-slate-50 hover:underline underline-offset-4s decoration-slate-50">
+            <span class="mr-1">Idiomas</span>
+          </button>
+          <div class="overflow-y-auto" >
+          <ul class="overflow-y-auto dropdown-menu absolute hidden text-gray-700 pt-1">
+            <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/vista2.html">Español</a></li>
+            <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/vista2.html">Inglés</a></li>
+            <li class=""><a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="/vista2.html">Guaraní</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+<div class="bg-white">
+    <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24">
+      <div class="space-y-12 lg:grid lg:gap-8 lg:space-y-0">
+        <div class="space-y-5 sm:space-y-4">
+          <h2 class="text-align: center; text-6xl font-bold tracking-tight sm:text-8xl">Lugares encontrados:</h2>
+          <p class="text-6xl text-gray-700">Que vivas lo mejor de Paraguay </p>
+          <p class="text-gray-500 font font-bold">#Paraguay #viajeinclusivo #turismointerior #diversidad.</p>
+        </div>
+<br>
+<!-- Lugar Uno... -->
+<div class="lg:col-span-2  bg-gray-100  hover:bg-gray-200">
+    <ul role="list" class="space-y-12 sm:-mt-8 sm:space-y-0 sm:divide-y sm:divide-gray-200 lg:gap-x-8 lg:space-y-0">
+      <li class="sm:py-8">
+        <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+          <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+            <img src= "/img/museo.jpg" class="rounded-lg object-cover object-left- shadow-lg">
+          </div>
+          <div class="sm:col-span-2">
+            <div class="space-y-4">
+              <div class="space-y-1 font-bold leading-6">
+                <p class="text-2xl py-5">Museo de la Tierra Guaraní.</p>
+                <p class="text-gray-500">#naturaleza #aventura #museo</p>
+              </div>
+              <div class="text-lg">El visitante se sumerge en corredores escenográficos para disfrutar de la mayor enciclopedia sobre la historia del Paraguay . Ubicado en la ciudad de Presidente Franco.</p>
+              <p>-Rampa: posee &nbsp; &nbsp; -Guia turista: posee &nbsp; &nbsp;-Lengua y seña: posee &nbsp; &nbsp;-Señalética para personas con discapacidad visual &nbsp; &nbsp;-Sanitarios adecuados para personas con movilidad reducida</p>
+              </div>
+              
+              <ul role="list" class="flex space-x-5">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Twitter</span>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+<!-- Lugar Dos... -->
+<div class="lg:col-span-2  bg-gray-100  hover:bg-gray-200">
+  <ul role="list" class="space-y-12 sm:-mt-8 sm:space-y-0 sm:divide-y sm:divide-gray-200 lg:gap-x-8 lg:space-y-0">
+    <li class="sm:py-8">
+      <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+        <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+          <img src= "/img/tatiyupi.jpg" class="rounded-lg object-cover object-left- shadow-lg">
+        </div>
+        <div class="sm:col-span-2">
+          <div class="space-y-4">
+            <div class="space-y-1 font-bold leading-6">
+              <p class="text-2xl py-5">Reserva Natural Tatí Yupí</p>
+              <p class="text-gray-500">#naturaleza #reservanatural #ecoaventura#</p>
+            </div>
+            <div class="text-lg">Ubicado en Alto Paraná, a 3 kilómetros de la ciudad de Hernandarias. Actividades recreativas como: paseos en bicicleta y carrosa.</p>
+            <p>-Rampa: posee &nbsp; &nbsp; -Guia turista: posee &nbsp; &nbsp;-Lengua y seña: posee personal capacitado &nbsp;-Sanitarios adecuados para personas con movilidad reducida.</p>
+            </div>
+            
+            <ul role="list" class="flex space-x-5">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">Twitter</span>
+                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">LinkedIn</span>
+                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+      <!-- Lugar Tres... -->
+      <div class="lg:col-span-2  bg-gray-100  hover:bg-gray-200">
+        <ul role="list" class="space-y-12 sm:-mt-8 sm:space-y-0 sm:divide-y sm:divide-gray-200 lg:gap-x-8 lg:space-y-0">
+          <li class="sm:py-8">
+            <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+              <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                <img src= "/img/itaipu.jpg" class="rounded-lg object-cover object-left- shadow-lg">
+              </div>
+              <div class="sm:col-span-2">
+                <div class="space-y-4">
+                  <div class="space-y-1 font-bold leading-6">
+                    <p class="text-2xl py-5">Complejo turistico Itaipu - Central Hidroeléctrica Itaipu</p>
+                    <p class="text-gray-500">#itaipu #hidroelectrica #diversidad </p>
+                  </div>
+                  <div class="text-lg">
+                    Ubicada en Hernandarias, Alto Paraná. Lider mundial en producción de energía limpia y renovable, una de las maravillas del mundo.</p>
+                  <p>-Rampa: posee &nbsp; &nbsp; -Guia turista: posee &nbsp; &nbsp;-Lengua y seña: posee &nbsp; &nbsp;-Señalética para personas con discapacidad visual &nbsp; &nbsp;-Sanitarios adecuados para personas con movilidad reducida</p>
+                  </div>
+                  <ul role="list" class="flex space-x-5">
+                    <li>
+                      <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+</body>
+<footer
+class="fixed bottom-0 left-0 z-50 w-full border-t border-gray-400 bg-white p-4 shadow dark:border-gray-600 dark:bg-gray-800 md:flex md:items-center md:justify-between md:p-6"
+>
+
+<br />
+
+<p class="text-sm text-gray-500 dark:text-gray-400 sm:text-center">El equipo de Recorriendo Paraguay tiene como objetivo dar a conocer todos los lugares turísticos del Paraguay, brindando información certera</p>
+<span class="text-sm text-gray-500 dark:text-gray-400 sm:text-center"
+  >© 2022
+  <a href="https://flowbite.com/" class="hover:underline"
+    >Grupo Slytherin </a>
+</span>
+</footer>
+</html>
