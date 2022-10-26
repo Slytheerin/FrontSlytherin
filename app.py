@@ -64,13 +64,13 @@ class Lugar(db.Model):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('RecorriendoPy.html')
 
 
 @app.route('/showcity', methods = ['GET'])
 def showcity():
     lugares = Lugar.query.all() #se crea el objeto lugares que pertenece a la clase Lugar (base de datos) y se utilliza el metodo query (para hacer un pedido a la base de datos) y se utiliza all para llamar a todos los campos de la base de datos.   
-    return render_template('showcity.html', lugares=lugares)  #se utiliza return para retornar el template renderizado con render template, se indica el archivo html que va a renderizar y se declara la variable que será utilizada en el html, se le da el valor de la variable declarada en la función de la ruta. 
+    return render_template('vista2.html', lugares=lugares)  #se utiliza return para retornar el template renderizado con render template, se indica el archivo html que va a renderizar y se declara la variable que será utilizada en el html, se le da el valor de la variable declarada en la función de la ruta. 
 
 
 @app.route('/showfilters', methods = ['GET'] )
