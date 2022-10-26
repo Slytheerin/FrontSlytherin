@@ -75,14 +75,11 @@ def showcity():
 
 @app.route('/showfilters', methods = ['GET'] )
 def showfilters():
-    filtros = filtros.query.all()
+    return render_template('vista3.html')
 
-    return render_template('showfilters.html', filtros=filtros)
-
-@app.route('/recommendme', methods= ['GET'])
-def recommendme():
-    recommendme = recommendme.query.all()
-    return render_template('recommendme.html')
+@app.route('/video', methods= ['GET'])
+def video():
+    return render_template('video.html')
 
 
 
