@@ -14,8 +14,8 @@ class Booking:
     dbsqlite = None
     
     def __init__(self, city, filename, start_date,
-                end_date, nbr_adults=None,
-                nbr_children=None, ages_of_children=None, nbr_room=None):
+                 end_date, nbr_adults=None,
+                 nbr_children=None, ages_of_children=None, nbr_room=None):
         """
         :param city: string
         :param filename: string
@@ -302,7 +302,7 @@ class Booking:
     def insert_table(self, data):
         global dbsqlite
         try:
-            query = "insert into lugar(nombre, latitud, longitud, fecha_inicio, fecha_fin, link, precio) values(?,?,?,?,?,?,?);"
+            query = "insert into lugar(ciudad, nombre, latitud, longitud, fecha_inicio, fecha_fin, link, precio) values(?,?,?,?,?,?,?,?);"
             stmt = dbsqlite.execute(query, data)
         except SQLAlchemyError as e:
             error=str(e.__dict__['orig'])
@@ -372,8 +372,9 @@ class Booking:
             start_date = self.get_item(row[6])
             end_date = self.get_item(row[7])
             link = self.get_item(row[11])
+            address_city = self.get_item(row[4])
 
-            data = (name, gps[0], gps[1], start_date, end_date, link, price)
+            data = (address_city, name, gps[0], gps[1], start_date, end_date, link, price)
             
             self.insert_table(data)
         
@@ -446,14 +447,16 @@ class Booking:
             
             if not err == "All arrays must be of the same length":
                 time.sleep(1)
-                run()
+                run(self.city)
 
             
-def run():
+def run(city):
     global dbsqlite
-    dbsqlite = create_engine("sqlite:///bd/booking.db")
+    dbsqlite = create_engine("sqlite:///instance/database.db")
     
-    book = Booking(city="Asuncion",
+    print(f"procesa {city}")
+    
+    book = Booking(city=city,
                 start_date="10-20-2022",
                 end_date="10-30-2022",
                 nbr_adults=2,
@@ -463,7 +466,7 @@ def run():
                 filename="booking.csv")
     
     # en caso que sea necesario, limpiar la tabla y volver a poblar. Si no corresponde comentar este linea: book.clean_table()
-    book.clean_table()
+    # book.clean_table()
     
     # path url que sera utilizando para procesar el web scraping de la pagina de booking
     path_url = "https://www.booking.com/index.es.html?aid=376374;label=esrow-OtlvhU2CXhSVxek50Z_17wS410489931081:pl:ta:p1:p22.563.000:ac:ap:neg:fi:tikwd-65526620:lp9069967:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YcUSe6BbHz0Ad_yDShFFSHQ;ws=&gclid=EAIaIQobChMIteebzOf2-gIVDTORCh1o_gCvEAAYASAAEgIfVvD_BwE"
@@ -476,4 +479,11 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    # run("Asuncion")
+    time.sleep(2)
+    run("Encarnacion")
+    time.sleep(2)
+    run("Hernandarias")
+    time.sleep(2)
+    run("Aregua")
+
